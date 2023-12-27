@@ -2,13 +2,13 @@
 
 function buildDefinitionList($arr)
 {
-    $res = [];
+    $res = []  ;
     if ($arr)
     {
         foreach ($arr as $item) {
-            $res[] = "<dl><dt>{$item[0]}</dt><<dd>{$item[0]}</dd>/dl>";
+            $res[] = "<dt>{$item[0]}</dt><<dd>{$item[1]}</dd>";
         }
-        return implode("\n", $res) . ";";
+        return "<dl>" . implode("\n", $res) . "</dl>;";
     }
     return '';
 }
